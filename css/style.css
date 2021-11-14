@@ -1,0 +1,364 @@
+/*Общие стили*/
+
+input::-webkit-input-placeholder,
+input[type="text"]::-webkit-input-placeholder,
+input[type="textarea"]::-webkit-input-placeholder input[type="password"]::-webkit-input-placeholder,
+textarea::-webkit-input-placeholder {
+	color: #808080;
+}
+
+input::-moz-placeholder,
+input[type="text"]::-moz-placeholder,
+input[type="textarea"]::-moz-placeholder,
+input[type="password"]::-moz-placeholder,
+textarea::-moz-placeholder {
+	color: #808080;
+}
+
+input:-ms-input-placeholder,
+input[type="text"]:-ms-input-placeholder,
+input[type="textarea"]:-ms-input-placeholder,
+input[type="password"]:-ms-input-placeholder,
+textarea::-ms-input-placeholder {
+	color: #808080;
+}
+
+input,
+textarea {
+	border-radius: 4px;
+	border: none;
+	outline: none;
+	resize: none !important;
+
+}
+
+input {
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	flex: 1;
+}
+
+input:focus {
+	border: 2px solid #62B9EA;
+}
+
+
+
+textarea {
+	overflow: auto;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+	width: 100%;
+	height: 160px;
+	padding: 2px 10px;
+}
+
+label {
+	color: #000;
+	font-size: 16px;
+	margin: 0;
+	flex-basis: 80px;
+}
+
+.checkbox {
+	display: none;
+}
+
+.checkbox+label {
+	padding-left: 40px;
+	position: relative;
+	cursor: pointer;
+}
+
+.checkbox+label::before {
+	content: '';
+	width: 24px;
+	height: 24px;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	margin: auto;
+	position: absolute;
+	border-radius: 4px;
+	border: 1px solid rgba(0, 0, 0, 0.15);
+}
+
+.checkbox+label::after {
+	content: '';
+	width: 24px;
+	height: 24px;
+	left: 0px;
+	top: 0px;
+	bottom: 0px;
+	margin: auto;
+	position: absolute;
+	border-radius: 4px;
+	border: 1px solid #62B9EA;
+	background: url("/task-test/image/svg/checked.svg") no-repeat center;
+	display: none;
+}
+
+.checkbox:checked+label::after {
+	display: block;
+}
+
+/*Детализирующие классы*/
+.subtitle {
+	font-size: 42px !important;
+	line-height: 54px !important;
+}
+
+.label {
+	width: 100%;
+	padding-left: 80px;
+	font-size: 14px;
+	margin-top: 7px;
+	color: #808080;
+}
+
+
+.button_container {
+	display: flex;
+	justify-content: center;
+}
+
+.button {
+	display: inline-block;
+	padding: 6px 29px;
+	background-color: #0078BB;
+	color: #fff;
+	border-radius: 4px;
+	cursor: pointer;
+}
+
+.paw {
+	display: flex;
+	align-items: center;
+	padding: 11px 42px;
+	font-size: 20px;
+}
+
+.check {
+	display: flex;
+	flex-direction: column;
+}
+
+.check .item {
+	display: inline-block !important;
+	padding-bottom: 20px !important;
+}
+
+/*Эффекты наведения*/
+
+a:active>svg * {
+	fill: rgba(255, 255, 255, 0.6);
+	stroke: rgba(255, 255, 255, 0.6);
+}
+
+.block_message .headline .logo a:hover {
+	color: #62B9EA;
+}
+
+.block_message .headline .logo a:active {
+	color: #0A6EA6;
+}
+
+.block_message .headline .links a:not(:last-child):hover {
+	color: #62B9EA;
+}
+
+.block_message .headline .links a:not(:last-child):active {
+	color: #0A6EA6;
+}
+
+.block_message .headline .logo a:hover>svg * {
+	fill: #62B9EA;
+	stroke: #fff;
+}
+
+.block_message .headline .logo a:active>svg * {
+	fill: #0A6EA6;
+	stroke: #fff;
+}
+
+.button:hover {
+	background-color: #62B9EA;
+	color: #fff !important;
+	text-decoration: none;
+}
+
+
+
+
+.button:active {
+	background-color: #0A6EA6;
+	color: rgba(255, 255, 255, 0.6) !important;
+}
+
+/*Основной блок*/
+.block_message {
+	font-family: PT Sans;
+	padding-bottom: 90px;
+}
+
+.block_message a:hover {
+	color: #62B9EA;
+	text-decoration: none !important;
+}
+
+.block_message h2 {
+	font-size: 64px;
+	font-family: PT Sans Narrow;
+	margin: 0;
+}
+
+.block_message h3 {
+	margin: 0;
+	line-height: 36px;
+}
+
+.block_message svg {
+	margin-right: 8px;
+}
+
+/*Хэдер*/
+.block_message .headline {
+	display: flex;
+	justify-content: space-between;
+	flex-wrap: wrap;
+	padding-bottom: 50px;
+}
+
+
+.block_message .headline .logo a {
+	display: flex;
+	align-items: center;
+	align-items: center;
+	font-size: 64px;
+	color: #000;
+}
+
+.block_message .headline .links a:not(:last-child) {
+	margin-right: 20px;
+	text-decoration: underline;
+	color: #0078BB;
+}
+
+.block_message .headline .links {
+	align-items: center;
+	display: flex;
+}
+
+.block_message .headline .links a:not(:last-child) {
+	margin-right: 20px;
+	text-decoration: underline;
+}
+
+/*Блок с информацией*/
+
+.block_message .block_info {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+}
+
+.block_message .items {
+	flex: 1;
+	padding-right: 40px;
+}
+
+.block_message .items .item {
+	padding-bottom: 50px;
+}
+
+.block_message .items .form {
+	display: flex;
+	flex-direction: column;
+
+}
+
+.block_message .items .form .line {
+	padding-bottom: 32px;
+	flex-direction: column;
+}
+
+.block_message .items .form .line h3 {
+	padding-bottom: 20px;
+}
+
+.block_message .items .form .line .item {
+	display: flex;
+	flex-wrap: wrap;
+}
+
+/*Блок Галерея*/
+.block_message .happy_cats_gallery .image {
+	margin: 16px 0px;
+}
+
+.block_message .happy_cats_gallery .image img {
+	width: 100%;
+	margin: 0;
+	height: auto;
+}
+
+
+/*Медиа запросы*/
+
+@media(max-width:768px) {
+
+	label {
+		flex-basis: 0px;
+	}
+
+	.label {
+		padding-left: 0;
+	}
+
+	.paw {
+		justify-content: center;
+		width: 100%;
+	}
+
+	.block_message h2 {
+		font-size: 58px;
+	}
+
+	.subtitle {
+		font-size: 38px !important;
+	}
+
+	.block_message .headline {
+		justify-content: center;
+	}
+
+	.block_message .headline .logo {
+		padding-bottom: 45px;
+	}
+
+	.block_message .headline .links {
+		justify-content: space-between;
+		flex-wrap: wrap;
+	}
+
+	.block_message .headline .links a:not(:last-child) {
+		margin-right: 0px;
+	}
+
+	.block_message .headline .links .button_container {
+		width: 100%;
+		margin-top: 15px;
+	}
+
+	.block_message .items {
+		padding-right: 0px;
+		padding-bottom: 60px;
+	}
+
+	.block_message .items .form .line .item {
+		flex-direction: column;
+		padding-bottom: 20px;
+	}
+
+	.block_message .happy_cats_gallery {
+		width: 100%;
+	}
+}
